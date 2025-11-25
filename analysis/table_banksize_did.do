@@ -49,10 +49,11 @@
 * ============================================================================
 cd "C:/Users/elliotoh/Box/lodes_shared/pharmacy/results/"
 
-use "C:/Users/elliotoh/Box/lodes_shared/pharmacy/data/advan/acs_drug_matched_month_radiusdef_forreg.dta", clear
+use "C:/Users/elliotoh/Box/lodes_shared/pharmacy/data/advan/regression_pharmacy_sample.dta", clear
 drop if npoi500 <= 5
 drop if placekey == "226-222@8dy-qsc-hqz" | placekey == "223-222@5s8-cj6-jd9" /* Two outlier stores with low propensity scores */
 
+* Merge IPW weights
 merge m:1 placekey using "C:/Users/elliotoh/Box/lodes_shared/pharmacy/data/advan/bank_radius500_nonbrand_ipw.dta"
 assert _merge == 1 if ~d_nbrand
 keep if _merge == 3

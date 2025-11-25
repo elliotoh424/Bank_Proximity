@@ -143,7 +143,8 @@ gen_3d_hist(drug_full_brand, 50, 'hist_cb_noncb_brand_full_drug_all','All Brand 
 # Regression sample of drug stores
 ########################################################################################################################################
 cols = ['placekey','start','mindist_from_bank_branch_yd', 'mindist_from_cb_branch_yd', 'mindist_from_noncb_branch_yd', 'pct_brandtr_jan2020', 'd_brand']
-drug = pd.read_stata("C:/Users/elliotoh/Box/lodes_shared/pharmacy/data/advan/acs_drug_matched_month_radiusdef.dta", columns = cols)
+drug = pd.read_stata("C:/Users/elliotoh/Box/lodes_shared/pharmacy/data/advan/regression_pharmacy_sample.dta", columns = cols)
+
 drug.columns = drug.columns.str.replace('pct_','pct')
 drug.columns = drug.columns.str.replace('mindist_from_','mindist_')
 drug.columns = drug.columns.str.replace('_yd','')
