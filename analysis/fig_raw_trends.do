@@ -22,6 +22,7 @@ drop if placekey == "226-222@8dy-qsc-hqz" | placekey == "223-222@5s8-cj6-jd9" /*
 g other500 = bank500 
 replace other500 = 0 if mega500
 
+* Merge IPW weights
 merge m:1 placekey using "C:/Users/elliotoh/Box/lodes_shared/pharmacy/data/advan/bank_radius500_nonbrand_ipw.dta"
 assert _merge == 1 if ~d_nbrand
 keep if _merge == 3
