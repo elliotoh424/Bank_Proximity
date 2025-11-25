@@ -1,5 +1,9 @@
 # Bank Proximity and Small Businesses
 Repository to replicate tables and figures in [**Banks on the Block: Branch Proximity and Small Business Performance**](https://www.dropbox.com/scl/fi/yve14u53k5n2yw2iap7cw/Oh-Seungmin.JMP.pdf?rlkey=kuwfib5fvebwizs93zfi3up5a&st=mh0klfh5&dl=0)
+
+## How to run
+Execute master_script.sh. Requires having both python and stata. 
+
 ## 📁 Repository Structure
 ```
 pharmacy-bank-proximity/
