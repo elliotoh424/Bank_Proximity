@@ -1,9 +1,34 @@
-# Bank Proximity and Small Businesses
+# The 500-Yard Economy: Do Megabanks Help Small Businesses?
 Repository to replicate tables and figures in [**Banks on the Block: Branch Proximity and Small Business Performance**](https://www.dropbox.com/scl/fi/yve14u53k5n2yw2iap7cw/Oh-Seungmin.JMP.pdf?rlkey=kuwfib5fvebwizs93zfi3up5a&st=mh0klfh5&dl=0)
 
 ## How to run
 Execute master_script.sh. Requires having both python and stata. 
 
+# Motivation
+1.  **The Narrative Myth:** The common belief is that local Community Banks are the champions of small business support, while Megabanks are distant and impersonal.
+2.  **The Counter-Intuitive Reality:** Analysis of foot traffic data reveals that **Megabanks** (Assets >$100B)—not community banks—were the primary drivers of recovery.
+3.  **The "Window Opportunity":** Even in the digital age, physical presence determines performance. [cite_start]The economic boost is hyper-localized to a **500-yard radius** around a branch.
+
+# Summary of Findings
+
+### Finding 1 — Small business nearby bank branches Outperform competitors
+Independent pharmacies nearby bank branches recovered 6-7% faster than bankless competitors. Branch effect hyperlocal: only affects independent pharmacies within 500 yards.:   
+![Bank Proximity](https://github.com/elliotoh424/Bank_Proximity/blob/main/output/figures/bank_proximity_raw_figure.png)
+
+### Finding 2 — Megabanks support small businesses growth 
+Contrary to the "relationship banking" narrative, independent pharmacies located near Megabanks experienced a **7-8% surge** in customer traffic compared to their bankless competitors.
+![Mega Bank Outperformance](https://github.com/elliotoh424/Bank_Proximity/blob/main/output/figures/megabank_proximity_coefficents.png)
+
+### Finding 3 — Community banks had no effect on small businesses growth 
+Independent pharmacies located near community banks recovered at the *same pace* as those with no bank.
+
+![Community Bank No Effect](https://github.com/elliotoh424/Bank_Proximity/blob/main/output/figures/cb_proximity_coefficients.png)
+
+### Finding 4 — Regulatory pressure forces megabanks to support small businesses 
+Independent pharmacies located near mega banks recovered faster by 10-11% during bank examination periods. No effect outside of examination periods.
+
+![Only around Examinations](https://github.com/elliotoh424/Bank_Proximity/blob/main/output/figures/examination_reg.png)
+.
 ## 📁 Repository Structure
 ```
 pharmacy-bank-proximity/
