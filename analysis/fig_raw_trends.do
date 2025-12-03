@@ -34,6 +34,8 @@ foreach yd of numlist 500 {
 preserve
 g dln_visits_mar20_brand = dln_visits_mar20
 replace dln_visits_mar20_brand = . if d_nbrand == 1
+g dln_visits_mar20_nbrand = dln_visits_mar20
+replace dln_visits_mar20_nbrand = . if d_nbrand == 0
 
 collapse (mean) dln_visits_mar20_brand dln_visits_mar20_nbrand dln_visits_mar20 [aw = ipw], by(start month_id bank`yd')
 
@@ -45,7 +47,7 @@ connected dln_visits_mar20_nbrand month_id if bank`yd' == 0, ///
 lcolor(maroon) msymbol(circle) lpattern(solid) connect(line) ), ///
 legend(row(2) order(1 "Bank within `yd' Yards" 2 "No Bank within `yd' Yards")) ///
 xlab( ///
-4 "4/19" 8 "8/19" 12 "12/19" 16 "4/20" 20 "8/20" 24 "12/20" 28 "4/21" 32 "8/21" 36 "12/21" 40 "4/22" 44 "8/22" 48 "12/22") xline(15 27 39, lstyle(dot)) xtitle(Date) ytitle(Cumulative Change in Foot Traffic) title(Independents with Nearby Bank vs. No Nearby Bank)
-graph export "figure/bank`yd'_gap_nonbrands_ipw.png", replace
+4 "4/19" 8 "8/19" 12 "12/19" 16 "4/20" 20 "8/20" 24 "12/20" 28 "4/21" 32 "8/21" 36 "12/21" 40 "4/22" 44 "8/22" 48 "12/22") xline(15 27 39, lstyle(dot)) xtitle(Date) ytitle(Cumulative Change in Foot Traffic) title(No Significant Effect Before 2022)
+graph export "figure/bank`yd'_gap_nonbrands_ipw_substack.png", replace
 restore
 }
